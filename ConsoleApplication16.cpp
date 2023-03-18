@@ -1,4 +1,3 @@
-﻿
 #include <iostream>
 class Figure {
 public:
@@ -10,12 +9,12 @@ public:
 		std::cout << "Corners : A = " << A << " B = " << C << " C = " << C << std::endl;
 		std::cout << "\n";
 	}
-	 void check() const {
-		if (A + B + C == 180) {
-			std::cout << "Правильный трегуольник";
+	void check() const {
+		if (true) {
+			std::cout << "Правильная фигура";
 		}
 		else {
-			std::cout << "Heправильный трегуольник";
+			std::cout << "Heправильная фигура";
 		}
 	}
 protected:
@@ -42,7 +41,7 @@ public:
 		std::cout << "Corners : A = " << A << " B = " << B << " C = " << C << std::endl;
 		std::cout << "\n";
 	}
-	
+
 
 };
 class Quadrate :public Figure {
@@ -67,8 +66,8 @@ public:
 		std::cout << "Corners : A = " << A << " A = " << B << " C = " << C << " D = " << D << std::endl;
 		std::cout << "\n";
 	}
-	void check() const  {
-		if (A + B + C+D == 360) {
+	void check() const {
+		if (A + B + C + D == 360) {
 			std::cout << "Правильный quadrate";
 		}
 		else {
@@ -197,11 +196,13 @@ int main()
 	print_info(rbtr);
 	//print_info(rm);
 	//delete rm;
-	//delete rbtr;
+	delete rbtr;
 	Triangle* triangl = new Triangle(10, 20, 30, 40, 50, 60);
 	print_info(triangl);
 	Quadrate* quadrat = new Quadrate(10, 20, 30, 40, 50, 60, 70, 80);
 	print_info(quadrat);
+	delete triangl;
+	delete quadrat;
 
 
 }
