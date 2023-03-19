@@ -4,17 +4,17 @@ public:
 	Figure() {}
 	virtual void print_info() const {
 		std::cout << "Name : Figure\n";
-
+		check();
 		std::cout << "Sides : a = " << a << " b = " << b << " c = " << c << std::endl;
 		std::cout << "Corners : A = " << A << " B = " << C << " C = " << C << std::endl;
 		std::cout << "\n";
 	}
 	void check() const {
 		if (true) {
-			std::cout << "Правильная фигура";
+			std::cout << "Правильная ";
 		}
 		else {
-			std::cout << "Heправильная фигура";
+			std::cout << "Heправильная ";
 		}
 	}
 protected:
@@ -40,6 +40,14 @@ public:
 		std::cout << "Sides : a = " << a << " b = " << b << " c = " << c << std::endl;
 		std::cout << "Corners : A = " << A << " B = " << B << " C = " << C << std::endl;
 		std::cout << "\n";
+	}
+	void check() const {
+		if (A+B+C==180) {
+			std::cout << "Правильная ";
+		}
+		else {
+			std::cout << "Heправильная ";
+		}
 	}
 
 
@@ -68,10 +76,10 @@ public:
 	}
 	void check() const {
 		if (A + B + C + D == 360) {
-			std::cout << "Правильный quadrate";
+			std::cout << "Правильная";
 		}
 		else {
-			std::cout << "Heправильный Quadrate";
+			std::cout << "Heправильная";
 		}
 	}
 
